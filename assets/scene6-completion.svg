@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg6" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFAE0"/>
+      <stop offset="60%" stop-color="#FFE8C0"/>
+      <stop offset="100%" stop-color="#FFD8A0"/>
+    </radialGradient>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBE0"/>
+      <stop offset="50%" stop-color="#FFE060"/>
+      <stop offset="100%" stop-color="#FFB830"/>
+    </radialGradient>
+    <radialGradient id="sunGlow6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE870" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#FFD040" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFB820" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="skin6" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FDDBB4"/>
+      <stop offset="100%" stop-color="#F5C490"/>
+    </radialGradient>
+    <filter id="sunFilter">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow6">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#D09030" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Sky / warm gradient background -->
+  <rect width="400" height="400" fill="url(#bg6)" rx="20"/>
+
+  <!-- Soft hills -->
+  <ellipse cx="100" cy="360" rx="140" ry="50" fill="#C8E8A0" opacity="0.7"/>
+  <ellipse cx="320" cy="370" rx="120" ry="45" fill="#B8D890" opacity="0.6"/>
+  <rect x="0" y="340" width="400" height="60" fill="#C8E8A0" rx="0" opacity="0.5"/>
+
+  <!-- Ground -->
+  <rect x="0" y="352" width="400" height="48" fill="#B8D890" opacity="0.8"/>
+
+  <!-- Tiny flowers -->
+  <circle cx="60" cy="355" r="5" fill="#FFD0E8"/>
+  <circle cx="70" cy="353" r="4" fill="#FFEEAA"/>
+  <circle cx="55" cy="358" r="3" fill="#C8F0C8"/>
+  <circle cx="340" cy="356" r="5" fill="#FFD0E8"/>
+  <circle cx="350" cy="354" r="4" fill="#FFEEAA"/>
+  <circle cx="360" cy="357" r="3.5" fill="#C8F0C8"/>
+  <circle cx="160" cy="358" r="4" fill="#FFB0C8"/>
+  <circle cx="260" cy="356" r="4" fill="#C0E0FF"/>
+
+  <!-- Small cloud puffs (transformed, wispy / bright) -->
+  <ellipse cx="60" cy="120" rx="28" ry="18" fill="#FFFAEC" opacity="0.7"/>
+  <ellipse cx="86" cy="112" rx="22" ry="14" fill="#FFFAEC" opacity="0.7"/>
+  <ellipse cx="108" cy="118" rx="25" ry="16" fill="#FFFAEC" opacity="0.65"/>
+
+  <ellipse cx="310" cy="130" rx="24" ry="14" fill="#FFFAEC" opacity="0.65"/>
+  <ellipse cx="335" cy="122" rx="20" ry="13" fill="#FFFAEC" opacity="0.6"/>
+  <ellipse cx="354" cy="130" rx="18" ry="12" fill="#FFFAEC" opacity="0.6"/>
+
+  <!-- SUN (transformed worry cloud) -->
+  <!-- Outer glow -->
+  <circle cx="200" cy="100" r="72" fill="url(#sunGlow6)" filter="url(#sunFilter)"/>
+  <!-- Sun rays -->
+  <line x1="200" y1="30" x2="200" y2="48" stroke="#FFD050" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="200" y1="152" x2="200" y2="170" stroke="#FFD050" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="130" y1="100" x2="148" y2="100" stroke="#FFD050" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="252" y1="100" x2="270" y2="100" stroke="#FFD050" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <!-- Diagonal rays -->
+  <line x1="150" y1="50" x2="162" y2="62" stroke="#FFD050" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <line x1="238" y1="138" x2="250" y2="150" stroke="#FFD050" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <line x1="250" y1="50" x2="238" y2="62" stroke="#FFD050" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <line x1="162" y1="138" x2="150" y2="150" stroke="#FFD050" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <!-- Short between rays -->
+  <line x1="135" y1="65" x2="145" y2="75" stroke="#FFE080" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="255" y1="65" x2="245" y2="75" stroke="#FFE080" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="135" y1="135" x2="145" y2="125" stroke="#FFE080" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="265" y1="135" x2="255" y2="125" stroke="#FFE080" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Sun body -->
+  <circle cx="200" cy="100" r="44" fill="url(#sunGrad)" filter="url(#shadow6)"/>
+  <!-- Sun face (happy) -->
+  <path d="M185 104 Q200 115 215 104" stroke="#E08020" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Sun eyes -->
+  <ellipse cx="190" cy="95" rx="5" ry="6" fill="#E08020" opacity="0.8"/>
+  <ellipse cx="210" cy="95" rx="5" ry="6" fill="#E08020" opacity="0.8"/>
+  <ellipse cx="190" cy="95" rx="3" ry="4" fill="#7A4020" opacity="0.6"/>
+  <ellipse cx="210" cy="95" rx="3" ry="4" fill="#7A4020" opacity="0.6"/>
+  <!-- Tiny cheeks -->
+  <ellipse cx="182" cy="103" rx="5" ry="3.5" fill="#FFA040" opacity="0.4"/>
+  <ellipse cx="218" cy="103" rx="5" ry="3.5" fill="#FFA040" opacity="0.4"/>
+
+  <!-- Sparkles around sun -->
+  <path d="M300 72 L303 64 L306 72 L314 75 L306 78 L303 86 L300 78 L292 75Z" fill="#FFE060" opacity="0.9"/>
+  <path d="M85 62 L87.5 56 L90 62 L96 64.5 L90 67 L87.5 73 L85 67 L79 64.5Z" fill="#FFE060" opacity="0.8"/>
+  <path d="M330 140 L332 136 L334 140 L338 142 L334 144 L332 148 L330 144 L326 142Z" fill="#FFE060" opacity="0.75"/>
+
+  <!-- Alex body (joyful pose, arms wide) -->
+  <!-- Legs -->
+  <rect x="186" y="302" width="17" height="50" rx="8" fill="#A8C4E8"/>
+  <rect x="209" y="302" width="17" height="50" rx="8" fill="#A8C4E8"/>
+  <!-- Shoes -->
+  <ellipse cx="194" cy="352" rx="14" ry="7" fill="#7898C8"/>
+  <ellipse cx="218" cy="352" rx="14" ry="7" fill="#7898C8"/>
+  <!-- Body -->
+  <rect x="175" y="232" width="62" height="76" rx="22" fill="#B8E0C8"/>
+  <!-- Arms spread wide and upward (joyful) -->
+  <path d="M175 252 Q142 234 130 215" stroke="#FDDBB4" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M237 252 Q270 234 282 215" stroke="#FDDBB4" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="129" cy="213" r="11" fill="#FDDBB4"/>
+  <circle cx="283" cy="213" r="11" fill="#FDDBB4"/>
+  <!-- Neck -->
+  <rect x="195" y="218" width="20" height="18" rx="8" fill="#FDDBB4"/>
+  <!-- Head -->
+  <ellipse cx="205" cy="202" rx="31" ry="29" fill="url(#skin6)"/>
+  <!-- Hair -->
+  <path d="M177 200 Q179 172 205 169 Q231 172 233 200" fill="#7A5C40" opacity="0.9"/>
+  <ellipse cx="205" cy="170" rx="27" ry="11" fill="#7A5C40" opacity="0.9"/>
+  <!-- Big joyful eyes - crinkled happy -->
+  <path d="M194 201 Q200 195 206 201" stroke="#5A3E28" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M210 201 Q216 195 222 201" stroke="#5A3E28" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Big smile -->
+  <path d="M195 213 Q205 222 215 213" stroke="#C87050" stroke-width="2.5" fill="#FFC0A0" opacity="0.5"/>
+  <path d="M195 213 Q205 222 215 213" stroke="#C87050" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks (rosy, big) -->
+  <ellipse cx="187" cy="210" rx="9" ry="6" fill="#FFB0A0" opacity="0.55"/>
+  <ellipse cx="223" cy="210" rx="9" ry="6" fill="#FFB0A0" opacity="0.55"/>
+
+  <!-- Little stars / sparkles near Alex's hands -->
+  <circle cx="120" cy="198" r="4" fill="#FFE060" opacity="0.9"/>
+  <circle cx="114" cy="205" r="2.5" fill="#FFE060" opacity="0.7"/>
+  <circle cx="290" cy="200" r="4" fill="#FFE060" opacity="0.9"/>
+  <circle cx="296" cy="207" r="2.5" fill="#FFE060" opacity="0.7"/>
+
+  <!-- Label -->
+  <rect x="68" y="373" width="264" height="24" rx="12" fill="white" opacity="0.65"/>
+  <text x="200" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#A07020">Your worry shrank into sunshine!</text>
+</svg>
