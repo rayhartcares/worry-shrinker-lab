@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F0F4FF"/>
+      <stop offset="100%" stop-color="#E0E8F8"/>
+    </radialGradient>
+    <radialGradient id="bodyGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F8EEE0"/>
+      <stop offset="100%" stop-color="#EEDCC8"/>
+    </radialGradient>
+    <!-- Glow gradients for each zone -->
+    <radialGradient id="headGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFD080" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#FFBE40" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFBE40" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shoulderGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F0A8D0" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#E888C0" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E888C0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="chestGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FF9080" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#FF7060" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF7060" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stomachGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#80D0A0" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#60C080" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#60C080" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow4">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bodyFilter">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#A090D0" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg4)" rx="20"/>
+
+  <!-- Soft radial background glow -->
+  <radialGradient id="centerGlow" cx="50%" cy="50%" r="40%">
+    <stop offset="0%" stop-color="#E8EEFF" stop-opacity="1"/>
+    <stop offset="100%" stop-color="#E0E8F8" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="200" cy="210" r="170" fill="url(#centerGlow)"/>
+
+  <!-- Title -->
+  <rect x="60" y="18" width="280" height="36" rx="18" fill="white" opacity="0.7"/>
+  <text x="200" y="41" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#7080B0" font-weight="bold">Where Do You Feel It?</text>
+
+  <!-- Body silhouette (simple, rounded, child shape) -->
+  <g filter="url(#bodyFilter)">
+    <!-- Torso -->
+    <rect x="155" y="170" width="90" height="130" rx="32" fill="url(#bodyGrad)"/>
+    <!-- Head -->
+    <ellipse cx="200" cy="118" rx="46" ry="48" fill="url(#bodyGrad)"/>
+    <!-- Neck -->
+    <rect x="184" y="156" width="32" height="24" rx="12" fill="url(#bodyGrad)"/>
+    <!-- Left arm -->
+    <rect x="116" y="175" width="42" height="90" rx="21" fill="url(#bodyGrad)" transform="rotate(-8, 137, 220)"/>
+    <!-- Right arm -->
+    <rect x="242" y="175" width="42" height="90" rx="21" fill="url(#bodyGrad)" transform="rotate(8, 263, 220)"/>
+    <!-- Left leg -->
+    <rect x="162" y="290" width="36" height="88" rx="18" fill="url(#bodyGrad)"/>
+    <!-- Right leg -->
+    <rect x="202" y="290" width="36" height="88" rx="18" fill="url(#bodyGrad)"/>
+  </g>
+
+  <!-- GLOW ZONES -->
+
+  <!-- Head glow -->
+  <ellipse cx="200" cy="118" rx="58" ry="60" fill="url(#headGlow)" filter="url(#softGlow4)"/>
+  <!-- Head inner ring -->
+  <ellipse cx="200" cy="118" rx="38" ry="38" fill="none" stroke="#FFD060" stroke-width="2.5" opacity="0.7" stroke-dasharray="6,4"/>
+  <!-- Head dot -->
+  <circle cx="200" cy="118" r="10" fill="#FFD060" opacity="0.9" filter="url(#softGlow4)"/>
+  <circle cx="200" cy="118" r="5" fill="#FFF0A0" opacity="1"/>
+
+  <!-- Shoulder glow (two zones) -->
+  <ellipse cx="145" cy="188" rx="38" ry="30" fill="url(#shoulderGlow)" filter="url(#softGlow4)"/>
+  <ellipse cx="255" cy="188" rx="38" ry="30" fill="url(#shoulderGlow)" filter="url(#softGlow4)"/>
+  <!-- Shoulder rings -->
+  <ellipse cx="145" cy="188" rx="22" ry="18" fill="none" stroke="#E888C0" stroke-width="2" opacity="0.6" stroke-dasharray="5,4"/>
+  <ellipse cx="255" cy="188" rx="22" ry="18" fill="none" stroke="#E888C0" stroke-width="2" opacity="0.6" stroke-dasharray="5,4"/>
+  <circle cx="145" cy="188" r="8" fill="#E888C0" opacity="0.9" filter="url(#softGlow4)"/>
+  <circle cx="255" cy="188" r="8" fill="#E888C0" opacity="0.9" filter="url(#softGlow4)"/>
+  <circle cx="145" cy="188" r="4" fill="#FFD0EC" opacity="1"/>
+  <circle cx="255" cy="188" r="4" fill="#FFD0EC" opacity="1"/>
+
+  <!-- Chest glow -->
+  <ellipse cx="200" cy="215" rx="44" ry="36" fill="url(#chestGlow)" filter="url(#softGlow4)"/>
+  <ellipse cx="200" cy="215" rx="28" ry="22" fill="none" stroke="#FF7060" stroke-width="2.5" opacity="0.6" stroke-dasharray="6,4"/>
+  <!-- Heart shape at chest -->
+  <path d="M200 222 C200 222 188 212 188 205 C188 200 194 197 200 203 C206 197 212 200 212 205 C212 212 200 222 200 222Z" fill="#FF9080" opacity="0.9" filter="url(#softGlow4)"/>
+
+  <!-- Stomach glow -->
+  <ellipse cx="200" cy="258" rx="40" ry="34" fill="url(#stomachGlow)" filter="url(#softGlow4)"/>
+  <ellipse cx="200" cy="258" rx="26" ry="20" fill="none" stroke="#60C080" stroke-width="2.5" opacity="0.6" stroke-dasharray="6,4"/>
+  <circle cx="200" cy="258" r="10" fill="#60C080" opacity="0.85" filter="url(#softGlow4)"/>
+  <circle cx="200" cy="258" r="5" fill="#C0F0D0" opacity="1"/>
+
+  <!-- Subtle body outline overlay (so body reads clearly over glows) -->
+  <ellipse cx="200" cy="118" rx="46" ry="48" fill="none" stroke="#D8C8B0" stroke-width="2" opacity="0.5"/>
+  <rect x="155" y="170" width="90" height="130" rx="32" fill="none" stroke="#D8C8B0" stroke-width="2" opacity="0.5"/>
+
+  <!-- Labels with soft bubbles -->
+  <!-- Head label -->
+  <rect x="262" y="95" width="110" height="26" rx="13" fill="white" opacity="0.8"/>
+  <line x1="252" y1="112" x2="264" y2="112" stroke="#FFD060" stroke-width="2"/>
+  <text x="317" y="113" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#C0A030">Head / Thoughts</text>
+
+  <!-- Shoulder label -->
+  <rect x="282" y="175" width="100" height="26" rx="13" fill="white" opacity="0.8"/>
+  <line x1="272" y1="188" x2="284" y2="188" stroke="#E888C0" stroke-width="2"/>
+  <text x="332" y="193" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#C060A0">Shoulders</text>
+
+  <!-- Chest label -->
+  <rect x="20" y="202" width="92" height="26" rx="13" fill="white" opacity="0.8"/>
+  <line x1="160" y1="215" x2="112" y2="215" stroke="#FF7060" stroke-width="2"/>
+  <text x="66" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#D05040">Chest / Heart</text>
+
+  <!-- Stomach label -->
+  <rect x="20" y="245" width="100" height="26" rx="13" fill="white" opacity="0.8"/>
+  <line x1="162" y1="258" x2="120" y2="258" stroke="#60C080" stroke-width="2"/>
+  <text x="70" y="263" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#408060">Tummy</text>
+</svg>

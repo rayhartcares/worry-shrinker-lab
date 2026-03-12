@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg5" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#E8F4FF"/>
+      <stop offset="100%" stop-color="#D0E8F8"/>
+    </radialGradient>
+    <!-- Main breathing circle gradient -->
+    <radialGradient id="breathCircle" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#C8E8FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#88C8F0" stop-opacity="0.3"/>
+    </radialGradient>
+    <!-- Inner glow -->
+    <radialGradient id="innerGlow5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#D0EEFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#A8D8F8" stop-opacity="0.6"/>
+    </radialGradient>
+    <!-- Soft ring gradient -->
+    <radialGradient id="ring5" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#A8D8F8" stop-opacity="0.0"/>
+      <stop offset="70%" stop-color="#88C0F0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#70B0E8" stop-opacity="0.5"/>
+    </radialGradient>
+    <filter id="glowFilter5">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur5">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg5)" rx="20"/>
+
+  <!-- Ambient background rings (faint, large) -->
+  <circle cx="200" cy="205" r="185" fill="none" stroke="#A8D0F0" stroke-width="1" opacity="0.2"/>
+  <circle cx="200" cy="205" r="160" fill="none" stroke="#A8D0F0" stroke-width="1" opacity="0.25"/>
+  <circle cx="200" cy="205" r="135" fill="none" stroke="#A8D0F0" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Title -->
+  <rect x="80" y="18" width="240" height="36" rx="18" fill="white" opacity="0.7"/>
+  <text x="200" y="41" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#6090B8" font-weight="bold">Take a Breath</text>
+
+  <!-- Outermost glow ring -->
+  <circle cx="200" cy="210" r="148" fill="url(#ring5)" opacity="0.5" filter="url(#softBlur5)"/>
+
+  <!-- Ring 4 -->
+  <circle cx="200" cy="210" r="128" fill="none" stroke="#88C8F0" stroke-width="3" opacity="0.25"/>
+  <!-- Ring 3 -->
+  <circle cx="200" cy="210" r="106" fill="none" stroke="#90D0F8" stroke-width="3.5" opacity="0.38"/>
+  <!-- Ring 2 -->
+  <circle cx="200" cy="210" r="86" fill="none" stroke="#98D8FF" stroke-width="4" opacity="0.5"/>
+  <!-- Ring 1 (innermost visible) -->
+  <circle cx="200" cy="210" r="68" fill="none" stroke="#A8E0FF" stroke-width="5" opacity="0.65"/>
+
+  <!-- Main breathing circle -->
+  <circle cx="200" cy="210" r="58" fill="url(#breathCircle)" filter="url(#glowFilter5)"/>
+  <!-- Inner bright core -->
+  <circle cx="200" cy="210" r="36" fill="url(#innerGlow5)"/>
+  <!-- Center dot -->
+  <circle cx="200" cy="210" r="16" fill="#FFFFFF" opacity="0.95"/>
+  <circle cx="200" cy="210" r="8" fill="#C8E8FF" opacity="0.9"/>
+
+  <!-- Breathing arc indicators (show inhale direction) -->
+  <!-- Top gentle arc -->
+  <path d="M200 150 Q248 152 248 210" stroke="#70B8E8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5" stroke-dasharray="8,6"/>
+  <path d="M200 150 Q152 152 152 210" stroke="#70B8E8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5" stroke-dasharray="8,6"/>
+
+  <!-- Small lotus / petal shapes around center (calming motif) -->
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.55" transform="rotate(0, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(45, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(90, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(135, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(180, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(225, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(270, 200, 210)"/>
+  <ellipse cx="200" cy="172" rx="9" ry="16" fill="#B8DAFF" opacity="0.45" transform="rotate(315, 200, 210)"/>
+
+  <!-- Center white dot on top of petals -->
+  <circle cx="200" cy="210" r="14" fill="white" opacity="0.95"/>
+  <circle cx="200" cy="210" r="7" fill="#D0ECFF" opacity="1"/>
+
+  <!-- Instruction labels around the circle -->
+  <!-- Breathe IN (top) -->
+  <rect x="140" y="74" width="120" height="28" rx="14" fill="white" opacity="0.75"/>
+  <text x="200" y="93" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#6090B8" font-style="italic">Breathe in...</text>
+  <!-- Down arrow -->
+  <line x1="200" y1="102" x2="200" y2="138" stroke="#88C0E8" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowDown)"/>
+
+  <!-- Breathe OUT (bottom) -->
+  <rect x="140" y="306" width="120" height="28" rx="14" fill="white" opacity="0.75"/>
+  <text x="200" y="325" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#6090B8" font-style="italic">Breathe out...</text>
+  <!-- Up arrow hint -->
+  <line x1="200" y1="302" x2="200" y2="282" stroke="#88C0E8" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Hold (right side) -->
+  <rect x="298" y="196" width="82" height="28" rx="14" fill="white" opacity="0.75"/>
+  <text x="339" y="215" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#6090B8" font-style="italic">Hold...</text>
+  <line x1="294" y1="210" x2="270" y2="210" stroke="#88C0E8" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Left side label: count -->
+  <rect x="20" y="196" width="82" height="28" rx="14" fill="white" opacity="0.75"/>
+  <text x="61" y="215" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#6090B8" font-style="italic">1 . 2 . 3</text>
+  <line x1="106" y1="210" x2="130" y2="210" stroke="#88C0E8" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Tiny stars -->
+  <circle cx="80" cy="90" r="3" fill="#B8D8F0" opacity="0.7"/>
+  <circle cx="320" cy="90" r="3" fill="#B8D8F0" opacity="0.7"/>
+  <circle cx="60" cy="330" r="2.5" fill="#B8D8F0" opacity="0.6"/>
+  <circle cx="340" cy="330" r="2.5" fill="#B8D8F0" opacity="0.6"/>
+  <circle cx="355" cy="180" r="2" fill="#C0E0F8" opacity="0.6"/>
+  <circle cx="46" cy="180" r="2" fill="#C0E0F8" opacity="0.6"/>
+</svg>
